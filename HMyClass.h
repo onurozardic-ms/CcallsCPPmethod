@@ -14,6 +14,7 @@ typedef struct MyClassEH {
 HMyClass * myClass_create( const char * s, MyClassEH * eh );
 void myClass_destroy( HMyClass * v, MyClassEH * eh );
 int myClass_doSomething( HMyClass * v, int i, MyClassEH * eh );
+int myClass_toplam(HMyClass* v, int a, int b, MyClassEH * eh);
 void myClass_iCouldThrow( HMyClass * v, int i, MyClassEH * eh );
 
 #endif

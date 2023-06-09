@@ -18,6 +18,8 @@ class MyClass
 
     void iCouldThrow( int idx );
 
+    int toplam(int a, int b);
+
 };
 
 #endif

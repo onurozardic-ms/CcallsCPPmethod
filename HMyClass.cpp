@@ -34,6 +34,17 @@ int myClass_doSomething( HMyClass * h, int j, MyClassEH * eh  ) {
   }
 }
 
+int myClass_toplam(HMyClass* h, int a, int b, MyClassEH* eh) {
+    try {
+        return reinterpret_cast<MyClass*>(h)->toplam(a,b);
+    }
+    catch (MyClassException e) {
+        if (!eh) throw;
+        eh->eh(e.mesg_.c_str(), eh->user_data);
+        return 0;
+    }
+}
+
 void myClass_iCouldThrow( HMyClass * h, int j, MyClassEH * eh  ) {
   try {
     reinterpret_cast<MyClass*>(h)->iCouldThrow(j);

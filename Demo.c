@@ -13,6 +13,7 @@ int main()
   HMyClass * h = myClass_create("hello", &eh);
   int j = myClass_doSomething(h, 3, &eh);
   printf("myClass_doSomething returned %d\n", j);
+  printf("MyClass::toplam=%d\n",myClass_toplam(h,3,5,&eh));
   myClass_iCouldThrow(h, -1, &eh);
   myClass_destroy(h, &eh);
   printf("DONE...\n");

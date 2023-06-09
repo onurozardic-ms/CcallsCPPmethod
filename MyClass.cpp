@@ -14,6 +14,12 @@ int MyClass::doSomething( int j ) {
   return j+1;
 }
 
+int MyClass::toplam(int a, int b) {
+	
+	std::cout << __func__ << (a + b) << " : toplam " << (a+b) << std::endl;
+	return a + b;
+}
+
 void MyClass::iCouldThrow( int idx ) {
   std::cout<<__func__<<" : called with "<<idx<<std::endl;
   if( idx < 0 ) throw MyClassException("I hate negative numbers");
